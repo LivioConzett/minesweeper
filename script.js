@@ -377,7 +377,7 @@ function lost(field){
     gameOverlay.style.backgroundColor = 'rgba(255,0,0,.2)';
 
 
-    field.style.backgroundImage = 'url(/img/bomb.png)';
+    field.classList.add('bomb');
     field.style.backgroundColor = 'red';
 
     // go through all the fields a reveal them if they are a bomb
@@ -386,7 +386,7 @@ function lost(field){
             let checkField = fieldArray[i][q];
 
             if(checkField.dataset.bomb === 'true'){
-                checkField.style.backgroundImage = 'url(/img/bomb.png)';
+                checkField.classList.add('bomb');
                 checkField.classList.remove('box-out-narrow');
                 checkField.dataset.clicked = true;
 
@@ -454,14 +454,14 @@ function leftClick(field){
 function middleClick(field){
 
     field.dataset.flagged = false;
+    removeAllBackgrounds(field);
 
     if(field.dataset.question === 'false'){
         field.dataset.question = true;
-        field.style.backgroundImage = 'url(/img/question.png)';
+        field.classList.add('question');
     }
     else{
         field.dataset.question = false;
-        field.style.backgroundImage = '';
     }
 
     countFlags();
@@ -471,20 +471,26 @@ function middleClick(field){
 function rightClick(field){
 
     field.dataset.question = false;
+    removeAllBackgrounds(field);
     
     if(field.dataset.flagged === 'false'){
         field.dataset.flagged = true;
-        field.style.backgroundImage = 'url(/img/flag.png)';
+        field.classList.add('flag');
     }
     else{
         field.dataset.flagged = false;
-        field.style.backgroundImage = '';
     }
     
     countFlags();
 
     checkForWin();
 
+}
+
+function removeAllBackgrounds(field){
+
+    field.classList.remove('flag');
+    field.classList.remove('question');
 }
 
 // reveal the field

@@ -257,6 +257,18 @@ body{
     cursor: pointer;
 }
 
+.flag{
+    background-image: url('./img/flag.png');
+}
+
+.question{
+    background-image: url('./img/question.png');
+}
+
+.bomb{
+    background-image: url('./img/bomb.png');
+}
+
 .box-out-wide{
     border-top: solid 4px white;
     border-left: solid 4px white;
