@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <meta charset="utf-8"/>
+        <title>Mines</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="styles.css">
+    </header>
+    <body>
+        <div class="desktop">
+
+            <div class="window-holder">
+                <div class="game-window box-out-wide">
+                    <div class="window-top">
+                        <div>Mines</div>
+                    </div>
+
+                    <div class="game-holder">
+
+                        <div class="field-holder box-in-wide">
+                            <div class="game-over-overlay"></div>
+                        </div>
+                        
+                    
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-holder">
+                <div class="menu box-out-wide">
+                    
+                    <div class="bomb-counter">
+                        <div class="bomb-counter-text">10</div>
+                    </div>
+
+                    <div class="reset-button box-out-narrow">
+                        <div class="reset-button-text">restart</div>
+                    </div>
+
+                    <div class="question-button box-out-wide"></div>
+                    <div class="flag-button box-out-wide"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="settings-holder">
+            <div class="settings-window box-out-wide">
+                <div class="window-top">
+                    <div>Settings</div>
+                </div>
+                
+                <div class="settings-input-holder">
+                    <div class="settings-label">
+                        <div>Width</div>
+                    </div>
+                    <div class="spcer"></div>
+                    <input id="width-input" class="settings-input box-in-narrow" type="number" value="10">
+                </div>
+
+                <div class="settings-input-holder">
+                    <div class="settings-label">
+                        <div>Height</div>
+                    </div>
+                    <input id="height-input" class="settings-input box-in-narrow" type="number" value="10">
+                </div>
+
+                <div class="settings-input-holder">
+                    <div class="settings-label">
+                        <div>bombs</div>
+                    </div>
+                    <input id="bomb-input" class="settings-input box-in-narrow" type="number" value="10">
+                </div>
+
+                <div class="settings-button-holder">
+                    <div class="settings-button box-out-narrow">
+                        <div class="settings-button-text">Play</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        </div>
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+</html>
